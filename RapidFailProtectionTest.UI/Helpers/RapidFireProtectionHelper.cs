@@ -12,14 +12,18 @@ namespace RapidFailProtectionTest.UI.Helpers
     {
         public static void StackOverFlowException(int numberOfExceptions)
         {
+            Console.WriteLine($"Triggering {numberOfExceptions} Stack overflow Exceptions");
             Action stackOverflowAction = RecursiveMethod;
             GenerateExceptions(stackOverflowAction, numberOfExceptions);
+            Console.WriteLine($"Triggered {numberOfExceptions} Stack overflow Exceptions");
         }
 
         public static void AccessViolationException(int numberOfExceptions)
         {
+            Console.WriteLine($"Triggering {numberOfExceptions} Access Violation Exceptions");
             Action accessViolationAction = AccessViolation;
             GenerateExceptions(accessViolationAction, numberOfExceptions);
+            Console.WriteLine($"Triggered {numberOfExceptions} Access Violation Exceptions");
         }
 
         private static void GenerateExceptions(Action action, int numberOfExceptions)
