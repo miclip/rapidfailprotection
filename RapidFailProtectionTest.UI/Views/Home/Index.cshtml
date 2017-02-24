@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br/>
+<div class="row">
+    <div class="alert alert-success hidden">
+        <strong>Success!</strong> Exceptions have been triggered, the app may be dead. Try refreshing the page or check the PCF logs.
+    </div>
+</div>
+
+<div class="row">
+    
+    
+    <input name="numberOfSOExceptions" id="numberOfSOExceptions" placeholder="Number of SO Exceptions" class="input-lg"/>
+
+    <button name="soEx" id="soEx" class="btn btn-lg btn-danger">Trigger Stack Overflow Exceptions</button>
+
+</div>
+
+<br />
+
+<div class="row">
+  
+    <input name="numberOfAVExceptions" id="numberOfAVExceptions" placeholder="Number of AV Exceptions" class="input-lg" />
+
+    <button name="avEx" id="avEx" class="btn btn-lg btn-danger">Trigger Access Violation Exception</button>
+
+</div>
+
